@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Clone</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo-section">
+        <i class="bx bx-menu"></i>
+        <a href="#logo" id="logo"
+          ><img src="images/youtubelogo.svg" alt="logo"
+        /></a>
+      </div>
+      <div class="search-section">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="mic">
+          <i class="bx bx-microphone"></i>
+        </div>
+      </div>
+      <div class="profile-section">
+        <i class="bx bx-search icon"></i>
+        <i class="bx bx-microphone icon"></i>
+        <i class="bx bx-video-plus"></i>
+        <i class="bx bx-bell"></i>
+        <img src="images/user.jpg" alt="user" />
+      </div>
+    </header>
+    <aside>
+      <div class="sidebar">
+        <ul>
+          <li class="home-active">
+            <a href="#"><i class="bx bxs-home"></i><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-video"></i><span>Shorts</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-tv"></i><span>Subscription</span></a>
+          </li>
+          <hr / class="show margin-bottom">
+          <li class="show">
+            <a href="#">You</a>
+          </li>
+          <li class="show">
+            <a href="#"
+              ><i class="bx bxs-user-account"></i><span>Your channel</span></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-history"></i><span>History</span></a>
+          </li>
+          <li class="show">
+            <a href="#"
+              ><i class="bx bxs-playlist"></i><span>Playlists</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="bx bxs-videos"></i
+              ><span>You<span class="show">r videos</span></span></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"
+              ><i class="bx bx-time-five"></i><span>Watch Later</span></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-like"></i><span>Liked videos</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="bx bxs-download"></i><span>Downloads</span></a
+            >
+          </li>
+          <hr / class="show margin-bottom">
+          <h3 class="subscription show">Subscriptions</h3>
+          <li class="show">
+            <a href="#"
+              ><img src="images/img1(1).jpg" alt="" /><span
+                >Anurag Singh Pro...</span
+              ></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"
+              ><img src="images/unnamed.jpg" alt="" /><span
+                >Nishant Chahar</span
+              ></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"
+              ><img src="images/user.jpg" alt="" /><span>Rohit Kumar</span></a
+            >
+          </li>
+
+          <li class="show">
+            <a href="#"
+              ><img src="images/img9(1).jpg" alt="" /><span
+                >Apna College</span
+              ></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"
+              ><img src="images/unnamed (1).jpg" alt="" /><span
+                >Quick Support</span
+              ></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"
+              ><img src="images/unnamed (2).jpg" alt="" /><span
+                >Learn Coding</span
+              ></a
+            >
+          </li>
+          <hr / class="show margin-bottom">
+          <h3 class="subscription show">Explore</h3>
+          <li class="show">
+            <a href="#"><i class="bx bxs-hot"></i><span>Trending</span></a>
+          </li>
+          <li class="show">
+            <a href="#"
+              ><i class="bx bx-shopping-bag"></i><span>Shopping</span></a
+            >
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-music"></i><span>Music</span></a>
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-movie"></i><span>Movie</span></a>
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-news"></i><span>News</span></a>
+          </li>
+          <li class="show">
+            <a href="#"><i class="bx bx-podcast"></i><span>Podcast</span></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <div class="container">
+        <div class="categories">
+          <ul>
+            <li data-name="all" class="all-active">All</li>
+            <li data-name="javascript">JavaScript</li>
+            <li data-name="news">News</li>
+            <li data-name="colleges">Colleges</li>
+            <li data-name="live">Live</li>
+            <li data-name="c++">C++</li>
+            <li data-name="sports">Sports</li>
+            <li data-name="skill">Skill</li>
+            <li data-name="graphic-design">Graphic Design</li>
+            <li data-name="test">Test</li>
+          </ul>
+        </div>
+        <div class="card-container">
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/OORUHkgg4IM/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Easy To Create JavaScript Games For Beginners
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>27K views </span><span>• 4 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img src="images/img1.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img1(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Destructuring in JavaScript | The Complete JavaScript Course
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Anurag Singh ProCodrr</p>
+                <div class="video-views">
+                  <span>17K views </span><span>• 9 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="news">
+            <div class="thumbnail-container">
+              <img src="images/img3.webp" alt="thumbnail" />
+              <p id="duration">5:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img3(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Budget 2024: Akhilesh Yadav ने बजट पर सरकार को घेरा
+                    |Nirmala...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">News18 India</p>
+                <div class="video-views">
+                  <span>42K views </span><span>• 4 hour ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="colleges">
+            <div class="thumbnail-container">
+              <img src="images/img15.webp" alt="thumbnail" />
+              <p id="duration">8:02</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img9(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Complete Placement Preparation : Full Stack Web
+                    Development...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Apna College</p>
+                <div class="video-views">
+                  <span>68K views </span><span>• 9 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/YEloDYy3DTg/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">8:02</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Create A Responsive Website with Login & Registration
+                    Form...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>68K views </span><span>• 9 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="skill">
+            <div class="thumbnail-container">
+              <img src="images/img9.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img9(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    What is DevOps? DevOps Explained | Simplest Explanation..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Apna College</p>
+                <div class="video-views">
+                  <span>57K views </span><span>• 11 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/coj-l7IrwGU/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    How to Make Chrome Extension in HTML CSS & JavaScript
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>24K views </span><span>• 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="news">
+            <div class="thumbnail-container">
+              <img src="images/img5.webp" alt="thumbnail" />
+              <p id="duration">5:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img5(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Union Budget 2024: किराए पर घर देना हुआ मुश्किल Nirmala...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">One India</p>
+                <div class="video-views">
+                  <span>14.2K views </span><span>• 12 hours ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="c++">
+            <div class="thumbnail-container">
+              <img src="images/img13.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img9(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    C or C++ | What coding language should you learn ?
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Apna College</p>
+                <div class="video-views">
+                  <span>1M views </span><span>• 2 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/DLs1X9T1GcY/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Create Text Typing Effect in HTML CSS & Vanilla JavaScript
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>17K views </span><span>• 10 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="live">
+            <div class="thumbnail-container">
+              <img src="images/img6.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img6(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Union Budget 2024: What did Railways get in the budget?...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">TV9 Bharatvarsh</p>
+                <div class="video-views">
+                  <span>71K watching </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/PsNaoDhzQm0/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Create Responsive Image Slider in HTML CSS and JavaScript
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>157K views </span><span>• 9 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/20Qb7pNMv-4/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/uITV5E7auiZMDD_BwhVRJMHXXY6qQc0GqBgVyP5LWYTmeRlUP2Dc945UlIbODvztd96ReOts=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Make A Flipping Card UI Design in HTML & CSS
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingLab</p>
+                <div class="video-views">
+                  <span>85K views </span><span>• 2 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="sports">
+            <div class="thumbnail-container">
+              <img src="images/img17.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img17(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">High IQ Movement in Sports</h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">AshStudio7</p>
+                <div class="video-views">
+                  <span>11M views </span><span>• 2 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/_RSaI2CxlXU/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Easy way to do Multiple File Uploading using HTML CSS and...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>7.4K views </span><span>• 3 weeks ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img src="images/img2.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img1(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    FREE Figma Design | Quiz App Challenge | JavaScript
+                    Projects..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Anurag Singh ProCodrr</p>
+                <div class="video-views">
+                  <span>11.4K views </span><span>• 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/cHkN82X3KNU/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/uITV5E7auiZMDD_BwhVRJMHXXY6qQc0GqBgVyP5LWYTmeRlUP2Dc945UlIbODvztd96ReOts=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Build A Responsive Calculator in HTML CSS & JavaScript
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingLab</p>
+                <div class="video-views">
+                  <span>30K views </span><span>• 2 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="live">
+            <div class="thumbnail-container">
+              <img src="images/img7.webp" alt="thumbnail" />
+              <p id="duration">7:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img7(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Sansad TV Lok Sabha LIVE | Parliament Budget session 2024..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Hindustan</p>
+                <div class="video-views">
+                  <span>30K watching </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/0_Lwi5ucGwM/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/DRtVBjk2Noax94hHqr8yCcEjhNUhHRvyzBE3qS9WWilnE1-uQQNVnQd8mdG9h_IvNZCRApZSQw=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Build A Currency Converter using ReactJS
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingNepal</p>
+                <div class="video-views">
+                  <span>7.2K views </span><span>• 2 weeks ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/AyV954yKRSw/maxresdefault.jpg"
+                alt="thumbnail"
+              />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img
+                    src="https://yt3.googleusercontent.com/uITV5E7auiZMDD_BwhVRJMHXXY6qQc0GqBgVyP5LWYTmeRlUP2Dc945UlIbODvztd96ReOts=s176-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="channel-logo"
+                  />
+                  <h2 class="title">
+                    Responsive Admin Dashboard Panel in HTML CSS and JavaS..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">CodingLab</p>
+                <div class="video-views">
+                  <span>161K views </span><span>• 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="javascript">
+            <div class="thumbnail-container">
+              <img src="images/hq720.webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img1(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Execution Context in JavaScript Explained in Depth
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Anurag Singh ProCodrr</p>
+                <div class="video-views">
+                  <span>9.9K views </span><span>• 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="skill">
+            <div class="thumbnail-container">
+              <img src="images/hq720 (1).webp" alt="thumbnail" />
+              <p id="duration">10:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/unnamed.jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Job, College Placements, Hiring & Projects with Hitesh
+                    Choudhary
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Nishant Chahar</p>
+                <div class="video-views">
+                  <span>23K views </span><span>• 2 days ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="news">
+            <div class="thumbnail-container">
+              <img src="images/img8.webp" alt="thumbnail" />
+              <p id="duration">8:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img8(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Budget पर Kharge ने Rajya Sabha में सुनाया, गुस्से में
+                    Nirmala...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Lallantop</p>
+                <div class="video-views">
+                  <span>200K views </span><span>• 1 day ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="colleges">
+            <div class="thumbnail-container">
+              <img src="images/img16.webp" alt="thumbnail" />
+              <p id="duration">12:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img16(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    College Shopping | What all things to buy in College?
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Aman Dhattarwal</p>
+                <div class="video-views">
+                  <span>913K views </span><span>• 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="live">
+            <div class="thumbnail-container">
+              <img src="images/img4.webp" alt="thumbnail" />
+              <p id="duration">12:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img4(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">LIVE: NBC News NOW - July 24</h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">NBC News</p>
+                <div class="video-views">
+                  <span>13K watching</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="c++">
+            <div class="thumbnail-container">
+              <img src="images/img14.webp" alt="thumbnail" />
+              <p id="duration">4:07:59</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img14(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    C++ OOPS in One Shot|| Object Oriented Programing |C++...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">College Wallah</p>
+                <div class="video-views">
+                  <span>13K views </span><span> • 3 days ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="colleges">
+            <div class="thumbnail-container">
+              <img src="images/img21.webp" alt="thumbnail" />
+              <p id="duration">11:07</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img21(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Badiya College चाहिए ? Best Colleges at Very Low
+                    Percentile..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Ritik Meghwani</p>
+                <div class="video-views">
+                  <span>213K views </span><span> • 2 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="sports">
+            <div class="thumbnail-container">
+              <img src="images/img18.webp" alt="thumbnail" />
+              <p id="duration">11:07</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img18(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    United States vs. Germany Full Game Highlights | USA
+                    Basketball
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">FOX Sports</p>
+                <div class="video-views">
+                  <span>232K views </span><span> • 1 day ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="c++">
+            <div class="thumbnail-container">
+              <img src="images/img22.webp" alt="thumbnail" />
+              <p id="duration">6:00:00</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img22(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">C++ Full Course for free ⚡️</h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Bro Code</p>
+                <div class="video-views">
+                  <span>3.7M views </span><span> • 2 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="graphic-design">
+            <div class="thumbnail-container">
+              <img src="images/img19.webp" alt="thumbnail" />
+              <p id="duration">8:00:00</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img19(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Graphic Design Full Course | Learn Graphic Design from...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Lets Uncover</p>
+                <div class="video-views">
+                  <span>1.2M views </span><span> • 5 months ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="test">
+            <div class="thumbnail-container">
+              <img src="images/img10.webp" alt="thumbnail" />
+              <p id="duration">20:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img10(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    FASTEST Way to Start Web Development and Get a Job..
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Technical Suneja</p>
+                <div class="video-views">
+                  <span>48K views </span><span> • 4 days ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="sports">
+            <div class="thumbnail-container">
+              <img src="images/img23.webp" alt="thumbnail" />
+              <p id="duration">13:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img18(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Greatest Sports Moments - M83 Outro (HD)
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">FOX Sports</p>
+                <div class="video-views">
+                  <span>17M views </span><span> • 6 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="graphic-design">
+            <div class="thumbnail-container">
+              <img src="images/img20.webp" alt="thumbnail" />
+              <p id="duration">11:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img20(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    How to Become a Graphic Designer | Everything About...
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Ishan Sharma</p>
+                <div class="video-views">
+                  <span>1M views </span><span> • 2 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="test">
+            <div class="thumbnail-container">
+              <img src="images/img11.webp" alt="thumbnail" />
+              <p id="duration">53:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img11(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    Live Mock Interview with @Striver | MAANG Format |
+                    GeeksforGeeks
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">GeeksforGeeks</p>
+                <div class="video-views">
+                  <span>168K views </span><span> • 1 year ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="skill">
+            <div class="thumbnail-container">
+              <img src="images/img24.webp" alt="thumbnail" />
+              <p id="duration">23:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img21(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    10 Tips to Boost your Communica Skills | by Him eesh Madaan
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Ritik Meghwani</p>
+                <div class="video-views">
+                  <span>217K views </span><span> • 3 weeks ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="test">
+            <div class="thumbnail-container">
+              <img src="images/img12.webp" alt="thumbnail" />
+              <p id="duration">8:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img12(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    MASTER the APTITUDE Test for PLACEMENTS 🚀 FREE Resource
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Love Babbar</p>
+                <div class="video-views">
+                  <span>80K views </span><span> • 10 days ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="video-card" data-name="graphic-design">
+            <div class="thumbnail-container">
+              <img src="images/img25.webp" alt="thumbnail" />
+              <p id="duration">31:04</p>
+            </div>
+            <div class="video-info">
+              <div class="video-title-info">
+                <div class="title-logo">
+                  <img src="images/img20(1).jpg" alt="" class="channel-logo" />
+                  <h2 class="title">
+                    20 YEAR OLD Graphic Designer Makes 4 Lakhs/Month 🤯| Anik
+                  </h2>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </div>
+              <div class="channel-info">
+                <p class="channel-name">Ishan Sharma</p>
+                <div class="video-views">
+                  <span>840K views </span><span> • 1 years ago</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- sidebar menu section -->
+  </body>
+</html>

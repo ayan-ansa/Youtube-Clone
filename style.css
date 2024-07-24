@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 13px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+body {
+    background: #0F0F0F;
+    color: #eeee;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 7px 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0F0F0F;
+    z-index: 10000;
+}
+
+#logo img {
+    width: 100px;
+}
+
+.logo-section,
+.search-section,
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.profile-section {
+    gap: 1.5rem;
+}
+
+.profile-section img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #4d4c4c;
+    width: 590px;
+    height: 40px;
+    padding: 0 1.4rem 0 1rem;
+    border-radius: 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    background: #0F0F0F;
+    color: #eeee;
+    height: 100%;
+
+}
+
+i {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.logo-section i {
+    font-size: 1.7rem;
+}
+
+.profile-section i {
+    font-size: 1.5rem;
+}
+
+.profile-section .icon {
+    display: none;
+}
+
+.mic {
+    height: 40px;
+    width: 40px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar start */
+aside {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 240px;
+    background: #0F0F0F;
+    z-index: 1000;
+    overflow-x: hidden;
+}
+
+aside .sidebar {
+    width: 100%;
+    padding: 10px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
+}
+
+
+
+aside .sidebar ul {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+aside .sidebar ul li {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+aside .sidebar ul .home-active {
+    background: #222;
+}
+
+aside .sidebar ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    color: #f1f1f1;
+    font-size: 13.7px;
+    font-weight: 400;
+}
+
+aside .sidebar ul li:hover {
+    background: #222;
+}
+
+aside.active {
+    top: 8%;
+    width: 70px;
+    padding: 4px;
+
+}
+
+aside.active .sidebar {
+    overflow: hidden;
+}
+
+aside.active .sidebar ul li a {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 10px;
+}
+
+aside.active .sidebar ul li {
+    height: auto;
+    padding: 1rem 0 14px;
+    justify-content: center;
+}
+
+
+hr {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    border: none;
+}
+
+.margin-bottom {
+    margin: 14px 0;
+}
+
+.subscription {
+    margin: 0 0 8px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.show.hide {
+    display: none;
+}
+
+.channel-name {
+    margin-bottom: .1rem;
+}
+
+/* Categories */
+
+.categories {
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #0F0F0F;
+}
+
+.categories ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.categories ul li {
+    list-style: none;
+    padding: 6px 12px;
+    background: #222;
+    border-radius: 8px;
+    transition: 0.2s;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.categories ul li:hover {
+    background: #444343;
+}
+
+
+.categories ul .all-active {
+    background: #eee;
+    color: black;
+}
+
+/* Main card */
+
+.container {
+    position: absolute;
+    width: calc(100% - 240px);
+    left: 240px;
+    top: 50px;
+    padding: 0 1.5rem 2rem;
+}
+
+.container.active {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+    column-gap: 1rem;
+    row-gap: 2rem;
+    margin-top: 5rem;
+}
+
+.video-card {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.thumbnail-container {
+    position: relative;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+#duration {
+    position: absolute;
+    bottom: 14px;
+    right: 10px;
+    font-size: 12px;
+    padding: 3px 4px;
+    background: #666666;
+    border-radius: 5px;
+}
+
+.video-title-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.title-logo {
+    display: flex;
+    gap: 14px;
+    margin-right: 10px;
+}
+
+.title-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.title-logo .title {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.channel-info {
+    padding-left: 3.3rem;
+}
+
+.channel-name,
+.video-views span {
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #868686;
+}
+
+/* Subscription */
+
+.sidebar ul li a img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+
+
+@media (max-width:1041px) {
+    .search-bar {
+        width: 450px;
+    }
+}
+
+@media (max-width:861px) {
+    .search-bar {
+        width: 350px;
+    }
+
+    .card-container {
+        margin-top: 5.2rem;
+    }
+}
+
+@media (max-width:750px) {
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width:790px) {
+    aside.active {
+        position: absolute;
+        left: -200px;
+    }
+
+    .container.active {
+        width: 100%;
+        left: 0;
+    }
+
+    .container:not(.active) {
+        position: fixed;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .search-section {
+        display: none;
+    }
+
+    .profile-section {
+        gap: 1rem;
+    }
+
+    .profile-section .icon {
+        display: block;
+    }
+
+    .profile-section i {
+        font-size: 1.4rem;
+    }
+}
