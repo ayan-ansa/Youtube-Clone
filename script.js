@@ -3,7 +3,7 @@ const menuIcon = document.querySelector(".logo-section i");
 const sidebar = document.querySelector("aside");
 const container = document.querySelector(".container");
 const hideItems = document.querySelectorAll(".show");
-const cardContainer = document.querySelectorAll(".card-container a");
+const cardContainer = document.querySelectorAll(".video-card");
 
 const filterCards = (e) => {
   document.querySelector(".all-active").classList.remove("all-active");
