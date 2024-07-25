@@ -119,13 +119,13 @@ aside .sidebar {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: gray transparent;
+    padding-bottom: 2rem;
 }
 
 
 
 aside .sidebar ul {
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
 }
 
@@ -280,7 +280,7 @@ hr {
     border-radius: 14px;
 }
 
-#duration {
+.duration {
     position: absolute;
     bottom: 14px;
     right: 10px;
