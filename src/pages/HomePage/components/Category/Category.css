@@ -1,0 +1,48 @@
+.categories {
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #0F0F0F;
+}
+
+.categories ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.categories ul li {
+    list-style: none;
+    padding: 6px 12px;
+    transition: 0.2s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.categories ul a {
+    text-decoration: none;
+    border-radius: 8px;
+
+}
+
+.categories ul li:hover {
+    background: #444343;
+}
+
+.category-active {
+    background: #eee;
+    color: black;
+}
+
+.category-inactive {
+    background: #222;
+    color: #eee;
+}
+@media (max-width:500px) {
+    .categories {
+        padding: 0.5rem 0;
+    }
+}

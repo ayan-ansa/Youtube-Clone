@@ -1,0 +1,144 @@
+header {
+    position: fixed;
+    width: 100%;
+    padding: 7px 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0F0F0F;
+    z-index: 10000;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo-section,
+.search-section,
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.profile-section {
+    gap: 1.5rem;
+}
+
+.profile-section img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #4d4c4c;
+    width: 590px;
+    height: 40px;
+    padding: 0 1.4rem 0 1rem;
+    border-radius: 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    background: #0F0F0F;
+    color: #eeee;
+    height: 100%;
+}
+
+.profile-section .icon,
+.profile-section .search-show {
+    display: none;
+}
+
+.mic {
+    height: 40px;
+    width: 40px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-section svg {
+    font-size: 1.5rem;
+}
+
+.profile-section svg {
+    font-size: 1.4rem;
+}
+
+@media (max-width:1041px) {
+    .search-bar {
+        width: 450px;
+    }
+}
+
+@media (max-width:861px) {
+    .search-bar {
+        width: 350px;
+    }
+}
+
+@media (max-width:750px) {
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width:650px) {
+    .search-section {
+        display: none;
+    }
+
+    .profile-section {
+        gap: 1rem;
+    }
+
+    .profile-section .icon {
+        display: block;
+    }
+
+    .profile-section i {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:500px) {
+    .header-hide {
+        display: none;
+    }
+
+    header {
+        padding: 1rem .8rem 8px;
+    }
+
+    .profile-section img,
+    .profile-section .video-icon {
+        display: none;
+    }
+
+    .profile-section .icon {
+        display: none;
+    }
+
+    .profile-section .search-show {
+        display: block;
+    }
+
+    .profile-section {
+        gap: 1.3rem;
+    }
+}
+
+@media (max-width:450px) {
+    .logo-section svg {
+        display: none;
+    }
+}
