@@ -2,16 +2,15 @@ import "./Recommend.css";
 import { API_KEY } from "../../../HomePage/Home";
 import { useEffect, useState } from "react";
 import RecommendCard from "./RecommendCard";
+import { BASE_URL } from "../../../HomePage/Home";
 
 function Recommend({ category, videoId, setIsOpen, channelTitle }) {
   const [data, setData] = useState([]);
   const categories = ["All", "From the series", "From " + channelTitle];
 
-  const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=30&regionCode=IN&videoCategoryId=${category}&key=${API_KEY}`;
-
   const fetchData = async () => {
     try {
-      const response = await fetch(BASE_URL);
+      const response = await fetch(`${BASE_URL}${category}&key=${API_KEY}`);
       const data = await response.json();
       setData(data.items);
     } catch (error) {

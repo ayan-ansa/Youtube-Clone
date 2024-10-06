@@ -41,8 +41,4 @@
     background: #222;
     color: #eee;
 }
-@media (max-width:500px) {
-    .categories {
-        padding: 0.5rem 0;
-    }
-}
+

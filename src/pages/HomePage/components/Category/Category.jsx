@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./Category.css";
+import { OpenContext } from "../../../../components/AppLayout";
+import { useContext } from "react";
 function Category({ setCategory }) {
+  const { setIsShow } = useContext(OpenContext);
+
   const categories = [
     "All",
     "Music",
@@ -46,7 +50,7 @@ function Category({ setCategory }) {
     }
   };
   return (
-    <div className="categories">
+    <div className="categories" onClick={() => setIsShow(false)}>
       <ul>
         {categories.map((category, i) => (
           <NavLink

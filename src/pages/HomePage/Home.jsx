@@ -6,20 +6,19 @@ import { OpenContext } from "../../components/AppLayout";
 import Shimmer from "./components/Shimmer/Shimmer";
 
 export const API_KEY = "AIzaSyAA-hXM8Yr2QcZlH5KwzB3Q3wi_OA8i6mE";
+export const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&videoCategoryId=`;
 
 function Home() {
-  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { isOpen,setIsOpen, category, setCategory,setIsHideHeader } = useContext(OpenContext);
-
-  const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&videoCategoryId=${category}&key=${API_KEY}`;
+  const { isOpen, setIsOpen, category, setCategory, setIsHideHeader,apiData, setApiData } =
+    useContext(OpenContext);
 
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(BASE_URL);
+      const response = await fetch(`${BASE_URL}${category}&key=${API_KEY}`);
       const data = await response.json();
-      setData(data.items);
+      setApiData(data.items);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -37,7 +36,11 @@ function Home() {
     <main>
       <div className={`container ${isOpen ? "active" : ""}`}>
         <Category setCategory={setCategory} />
-        <Feed data={data} setIsOpen={setIsOpen} setIsHideHeader={setIsHideHeader}  />
+        <Feed
+          data={apiData}
+          setIsOpen={setIsOpen}
+          setIsHideHeader={setIsHideHeader}
+        />
       </div>
     </main>
   );

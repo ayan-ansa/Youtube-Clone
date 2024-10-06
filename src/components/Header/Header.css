@@ -21,6 +21,10 @@ header {
     gap: 1.1rem;
 }
 
+.search-section {
+    position: relative;
+}
+
 .profile-section {
     gap: 1.5rem;
 }
@@ -50,6 +54,60 @@ header {
     color: #eeee;
     height: 100%;
 }
+
+
+.search-items {
+    display: none;
+    position: absolute;
+    top: 113%;
+    background-color: #202020;
+    width: 540px;
+    border-radius: .6rem;
+    padding: 1rem 0 .7rem;
+}
+
+.search-items a:hover {
+    text-decoration: underline;
+}
+
+.search-items a {
+    text-decoration: none;
+    color: rgb(54, 170, 216);
+    font-size: 13px;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: .4rem 1rem;
+}
+
+.open {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.search-item:hover {
+    background-color: #4d4c4c;
+}
+
+.search-text {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    font-weight: 600;
+}
+
+.search-text svg {
+    font-size: 1.5rem;
+}
+
+
 
 .profile-section .icon,
 .profile-section .search-show {
@@ -88,12 +146,30 @@ header {
 
 @media (max-width:750px) {
     .search-bar {
-        width: 250px;
+        width: 270px;
+    }
+
+    .search-items {
+        width: 500px;
+    }
+}
+
+@media (max-width:680px) {
+    .search-items {
+        width: 400px;
     }
 }
 
 @media (max-width:650px) {
     .search-section {
+        display: none;
+    }
+
+    .search-bar svg {
+        display: none;
+    }
+
+    .mic {
         display: none;
     }
 
@@ -133,12 +209,50 @@ header {
     }
 
     .profile-section {
-        gap: 1.3rem;
+        gap: .8rem;
     }
 }
 
 @media (max-width:450px) {
     .logo-section svg {
         display: none;
+    }
+
+    .search-text p {
+        font-size: 17px;
+    }
+
+    .logo-section.none {
+        display: none;
+    }
+
+    .search-section.show {
+        display: block;
+    }
+
+    .search-text {
+        gap: 1.1rem;
+        font-weight: 500;
+    }
+
+    .search-bar {
+        height: 35px;
+        width: 330px;
+    }
+
+    .search-items {
+        left: -14px;
+        border-radius: .2rem;
+        width: 430px;
+    }
+}
+
+@media (max-width:400px) {
+    .search-items {
+        width: 365px;
+    }
+
+    .search-bar {
+        width: 270px;
     }
 }

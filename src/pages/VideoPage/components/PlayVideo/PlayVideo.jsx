@@ -18,11 +18,10 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const [channelData, setChannelData] = useState("");
   const [commentData, setCommentData] = useState([]);
 
+  const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=`;
   const fetchVideoData = async () => {
     try {
-      const response = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
-      );
+      const response = await fetch(`${BASE_URL}${videoId}&key=${API_KEY}`);
       const data = await response.json();
       setVideoData(data?.items[0]);
       setChannelTitle(data?.items[0]?.snippet?.channelTitle);
@@ -33,9 +32,10 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const fetchChannelData = async () => {
     try {
       const response = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${videoData?.snippet?.channelId}&key=${API_KEY}`
+        `${BASE_URL}${videoData?.snippet?.channelId}&key=${API_KEY}`
       );
       const data = await response.json();
+
       setChannelData(data?.items?.[0]);
     } catch (error) {
       console.log(error);
@@ -44,7 +44,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const fetchCommentData = async () => {
     try {
       const response = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=30&videoId=${videoId}&key=${API_KEY}`
+        `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=50&videoId=${videoId}&key=${API_KEY}`
       );
       const data = await response.json();
       setCommentData(data?.items);

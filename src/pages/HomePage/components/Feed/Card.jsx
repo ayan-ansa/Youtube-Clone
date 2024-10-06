@@ -46,7 +46,12 @@ function Card({ data, setIsOpen, setIsHideHeader }) {
   return (
     <span className="video-card ">
       <div className="thumbnail-container">
-        <Link to={`/watch/${data.id}`} onClick={handleClick}>
+        <Link
+          to={`/watch/${
+            data.statistics ? data.id : data.id.videoId || "VlPiVmYuoqw"
+          }`}
+          onClick={handleClick}
+        >
           <img src={data.snippet.thumbnails.high.url} alt="thumbnail" />
         </Link>
       </div>
@@ -58,8 +63,10 @@ function Card({ data, setIsOpen, setIsHideHeader }) {
         <div className="channel-info">
           <p className="channel-name">{data.snippet.channelTitle}</p>
           <div className="video-views">
-            <span>{convertViews(data.statistics.viewCount)} views </span>
-            <span>• {timeAgo(data.snippet.publishedAt)} </span>
+            <span>
+              {data.statistics ? convertViews(data.statistics.viewCount) : "1M"}
+            </span>
+            <span> • {timeAgo(data.snippet.publishedAt)} </span>
           </div>
         </div>
       </div>

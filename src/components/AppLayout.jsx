@@ -1,17 +1,22 @@
-import { createContext,useState } from "react";
+import { createContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 
 export const OpenContext = createContext();
 function AppLayout() {
+  const [apiData, setApiData] = useState([]);
+  const [isShow, setIsShow] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [category, setCategory] = useState(0);
   const [isHideHeader, setIsHideHeader] = useState(false);
 
   const data = {
+    apiData,
+    setApiData,
     isOpen,
     setIsOpen,
+    setIsShow,
     category,
     setCategory,
     setIsHideHeader,
@@ -21,7 +26,16 @@ function AppLayout() {
   });
   return (
     <>
-      <Header setIsOpen={setIsOpen} isHideHeader={isHideHeader} />
+      <Header
+        setIsOpen={setIsOpen}
+        setApiData={setApiData}
+        isShow={isShow}
+        setIsShow={setIsShow}
+        setIsHideHeader={setIsHideHeader}
+        category={category}
+        setCategory={setCategory}
+        isHideHeader={isHideHeader}
+      />
       <Sidebar
         isOpen={isOpen}
         setIsOpen={setIsOpen}

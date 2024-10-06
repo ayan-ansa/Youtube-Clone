@@ -18,6 +18,45 @@ import Qick_Icon from "./assets/quick.jpg";
 import Shradha from "./assets/shradha.jpg";
 import LC from "./assets/lc.jpg";
 
+export const searchHistory = [
+  {
+    id: 1,
+    text: "apna college",
+  },
+  {
+    id: 2,
+    text: "hoisting in javascript",
+  },
+  {
+    id: 3,
+    text: "computer science",
+  },
+  {
+    id: 4,
+    text: "reactjs",
+  },
+  {
+    id: 5,
+    text: "nodejs",
+  },
+  {
+    id: 6,
+    text: "expressjs",
+  },
+  {
+    id: 7,
+    text: "python",
+  },
+  {
+    id: 8,
+    text: "java programming",
+  },
+  {
+    id: 9,
+    text: "c++ programming",
+  },
+];
+
 export const listItems = [
   {
     id: 1,
@@ -130,5 +169,3 @@ export const explore = [
     title: "Podcasts",
   },
 ];
-
-

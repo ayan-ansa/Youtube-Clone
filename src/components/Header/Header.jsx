@@ -10,22 +10,29 @@ import ProfileSection from "./components/ProfileSection";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-function Header({ setIsOpen, isHideHeader }) {
+function Header({ setIsOpen, isHideHeader, setApiData, isShow, setIsShow }) {
   return (
     <header className={isHideHeader ? "header-hide" : ""}>
-      <div className="logo-section">
+      <div className={`logo-section ${isShow ? "none" : ""}`}>
         <LuMenu onClick={() => setIsOpen((prev) => !prev)} />
         <Link to="/">
           <img src={logo} alt="logo" className="logo" />
         </Link>
       </div>
-      <Search search={<FiSearch />} micro={<HiMicrophone />} />
+      <Search
+        search={<FiSearch />}
+        micro={<HiMicrophone />}
+        setApiData={setApiData}
+        isShow={isShow}
+        setIsShow={setIsShow}
+      />
       <ProfileSection
         search1={<FiSearch className="icon" />}
         micro={<HiMicrophone className="icon" />}
         video={<BiVideoPlus className="video-icon" />}
         bell={<FaRegBell />}
-        search2={<FiSearch className="search-show"/>}
+        search2={<FiSearch className="search-show" />}
+        setIsShow={setIsShow}
         userUrl={user}
       />
     </header>

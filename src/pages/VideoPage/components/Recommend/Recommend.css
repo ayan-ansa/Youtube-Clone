@@ -1,6 +1,7 @@
 .recommend {
     width: 32%;
 }
+
 .recommend hr {
     display: none;
     margin-bottom: 2rem;
@@ -9,6 +10,7 @@
 .recommend-categories {
     margin-bottom: 1rem;
 }
+
 
 .recommend a {
     text-decoration: none;
@@ -74,7 +76,6 @@
 }
 
 @media (max-width:1000px) {
-
     .recommend {
         width: 100%;
     }
