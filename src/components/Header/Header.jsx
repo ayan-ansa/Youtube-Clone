@@ -1,4 +1,4 @@
-import logo from "../../assets/youtubelogo.svg";
+import logo from "../../assets/yt-logo.png";
 import user from "../../assets/user.jpg";
 import { LuMenu } from "react-icons/lu";
 import { FiSearch } from "react-icons/fi";
