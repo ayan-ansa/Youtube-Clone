@@ -59,7 +59,7 @@ header {
 .search-items {
     display: none;
     position: absolute;
-    top: 113%;
+    top: 120%;
     background-color: #202020;
     width: 540px;
     border-radius: .6rem;
@@ -192,7 +192,7 @@ header {
     }
 
     header {
-        padding: 1rem .8rem 8px;
+        padding: 14px .8rem;
     }
 
     .profile-section img,

@@ -13,7 +13,6 @@ import {
   MdPodcasts,
 } from "react-icons/md";
 import Anurag from "./assets/anurag.jpg";
-import Nishant from "./assets/nishant.jpg";
 import Qick_Icon from "./assets/quick.jpg";
 import Shradha from "./assets/shradha.jpg";
 import LC from "./assets/lc.jpg";
@@ -109,23 +108,17 @@ export const subscriptions = [
   {
     id: 2,
     class: "show",
-    imgUrl: Nishant,
-    title: "Nishant Chahar",
-  },
-  {
-    id: 3,
-    class: "show",
     imgUrl: Shradha,
     title: "Apna College",
   },
   {
-    id: 4,
+    id: 3,
     class: "show",
     imgUrl: Qick_Icon,
     title: "Quick Support",
   },
   {
-    id: 5,
+    id: 4,
     class: "show",
     imgUrl: LC,
     title: "Learning Coding",

@@ -17,8 +17,7 @@ function Category({ setCategory }) {
     "Blogs",
   ];
 
-  const changeCategory = (e) => {
-    let category = e.target.innerText;
+  const changeCategory = (category) => {
     switch (category) {
       case "All":
         setCategory(0);
@@ -63,8 +62,7 @@ function Category({ setCategory }) {
             <li
               key={i}
               className={category === "All" ? "all-active" : ""}
-              data-name={category.toLowerCase()}
-              onClick={changeCategory}
+              onClick={(e) => changeCategory(e.target.innerText)}
             >
               {category}
             </li>

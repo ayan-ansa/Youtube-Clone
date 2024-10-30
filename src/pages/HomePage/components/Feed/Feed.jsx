@@ -7,7 +7,7 @@ function Feed({ data, setIsOpen, setIsHideHeader }) {
       {data &&
         data.map((item, i) => (
           <Card
-            key={item.statistics ? item.id : item.id.videoId || i}
+            key={i}
             setIsOpen={setIsOpen}
             setIsHideHeader={setIsHideHeader}
             data={item}

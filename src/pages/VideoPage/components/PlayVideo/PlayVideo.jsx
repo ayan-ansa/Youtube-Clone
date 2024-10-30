@@ -13,38 +13,43 @@ import { timeAgo } from "../../../HomePage/components/Feed/Card";
 import { convertViews } from "../../../HomePage/components/Feed/Card";
 import { Link } from "react-router-dom";
 
+const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
+
 function PlayVideo({ videoId, setChannelTitle }) {
   const [videoData, setVideoData] = useState("");
   const [channelData, setChannelData] = useState("");
   const [commentData, setCommentData] = useState([]);
 
-  const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=`;
+  const fetchChannelData = async (channelId) => {
+    try {
+      const response = await fetch(
+        `${BASE_URL}/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${API_KEY}`
+      );
+      const data = await response.json();
+      console.log(data?.items?.[0].snippet.thumbnails);
+      setChannelData(data?.items?.[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const fetchVideoData = async () => {
     try {
-      const response = await fetch(`${BASE_URL}${videoId}&key=${API_KEY}`);
+      const response = await fetch(
+        `${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+      );
       const data = await response.json();
+      fetchChannelData(data?.items[0]?.snippet?.channelId);
       setVideoData(data?.items[0]);
       setChannelTitle(data?.items[0]?.snippet?.channelTitle);
     } catch (error) {
       console.log(error);
     }
   };
-  const fetchChannelData = async () => {
-    try {
-      const response = await fetch(
-        `${BASE_URL}${videoData?.snippet?.channelId}&key=${API_KEY}`
-      );
-      const data = await response.json();
 
-      setChannelData(data?.items?.[0]);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   const fetchCommentData = async () => {
     try {
       const response = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=50&videoId=${videoId}&key=${API_KEY}`
+        `${BASE_URL}/commentThreads?part=snippet%2Creplies&maxResults=50&videoId=${videoId}&key=${API_KEY}`
       );
       const data = await response.json();
       setCommentData(data?.items);
@@ -56,10 +61,10 @@ function PlayVideo({ videoId, setChannelTitle }) {
   useEffect(() => {
     if (videoId) {
       fetchVideoData();
-      fetchChannelData();
       fetchCommentData();
     }
   }, [videoId]);
+
   return (
     <div className="play-video">
       <iframe
