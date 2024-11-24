@@ -1,19 +1,14 @@
 import { useParams } from "react-router-dom";
+// import { OpenContext } from "../../Layout/AppLayout";
 import { useContext, useState } from "react";
 import PlayVideo from "./components/PlayVideo/PlayVideo";
 import Recommend from "./components/Recommend/Recommend";
 import "./Video.css";
 import { OpenContext } from "../../context/OpenContext";
-
 function Video() {
-  const { isOpen, setIsOpen, category, setIsHideHeader } =
-    useContext(OpenContext);
+  const { isOpen, setIsOpen, category } = useContext(OpenContext);
   const { videoId } = useParams();
   const [channelTitle, setChannelTitle] = useState("");
-
-  window.addEventListener("popstate", () => {
-    setIsHideHeader(false);
-  });
 
   return (
     <main>

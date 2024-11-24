@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useState } from "react";
+
 
 export const OpenContext = createContext();
 
@@ -23,5 +23,9 @@ export const OpenProvider = ({ children }) => {
     setIsHideHeader,
   };
 
-  return <OpenContext.Provider value={data}>{children}</OpenContext.Provider>;
+  return (
+    <OpenContext.Provider value={data}>
+      {children}
+    </OpenContext.Provider>
+  );
 };

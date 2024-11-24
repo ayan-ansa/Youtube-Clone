@@ -1,15 +1,14 @@
-import List from "./List";
+import List from "./components/List";
 import { AiFillHome } from "react-icons/ai";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdSubscriptions } from "react-icons/md";
 import { listItems, subscriptions, explore } from "../../data";
 import "./Sidebar.css";
-import { useContext } from "react";
 import { OpenContext } from "../../context/OpenContext";
+import {useContext} from "react"
 
 function Sidebar() {
-  const {isOpen, setIsOpen,setCategory} = useContext(OpenContext);
-
+  const { isOpen, setCategory, setIsOpen } = useContext(OpenContext);
   return (
     <aside className={isOpen ? "active" : ""}>
       <div className="sidebar">

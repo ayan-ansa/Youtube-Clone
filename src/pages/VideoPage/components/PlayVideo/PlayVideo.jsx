@@ -9,10 +9,11 @@ import {
 import "./PlayVideo.css";
 import { useEffect, useState } from "react";
 import { API_KEY } from "../../../HomePage/Home";
-import { timeAgo, convertViews } from "../../../HomePage/components/Feed/Card";
+import { timeAgo } from "../../../HomePage/components/Feed/Card";
+import { convertViews } from "../../../HomePage/components/Feed/Card";
 import { Link } from "react-router-dom";
 
-const BASE_URL = import.meta.env.VITE_VIDEO_BASE_URL;
+const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
 
 function PlayVideo({ videoId, setChannelTitle }) {
   const [videoData, setVideoData] = useState("");
@@ -25,6 +26,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
         `${BASE_URL}/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${API_KEY}`
       );
       const data = await response.json();
+      console.log(data?.items?.[0].snippet.thumbnails);
       setChannelData(data?.items?.[0]);
     } catch (error) {
       console.log(error);

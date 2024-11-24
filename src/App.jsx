@@ -3,12 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./Layout/AppLayout";
 import Home from "./pages/HomePage/Home";
 import Video from "./pages/VideoPage/Video";
-import ErrorComponent from "./components/ErrorComponent";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: <ErrorComponent />,
     children: [
       {
         path: "/",

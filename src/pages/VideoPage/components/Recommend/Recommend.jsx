@@ -1,7 +1,8 @@
 import "./Recommend.css";
+import { API_KEY } from "../../../HomePage/Home";
 import { useEffect, useState } from "react";
 import RecommendCard from "./RecommendCard";
-import { BASE_URL,API_KEY } from "../../../HomePage/Home";
+import { BASE_URL } from "../../../HomePage/Home";
 
 function Recommend({ category, videoId, setIsOpen, channelTitle }) {
   const [data, setData] = useState([]);
