@@ -11,29 +11,25 @@ function AppLayout() {
   // const [category, setCategory] = useState(0);
   // const [isHideHeader, setIsHideHeader] = useState(false);
 
-  
-  window.addEventListener("popstate", () => {
-    setIsHideHeader(false);
-  });
   return (
     <>
       <Header
-        // setIsOpen={setIsOpen}
-        // setApiData={setApiData}
-        // isShow={isShow}
-        // setIsShow={setIsShow}
-        // setIsHideHeader={setIsHideHeader}
-        // category={category}
-        // setCategory={setCategory}
-        // isHideHeader={isHideHeader}
+      // setIsOpen={setIsOpen}
+      // setApiData={setApiData}
+      // isShow={isShow}
+      // setIsShow={setIsShow}
+      // setIsHideHeader={setIsHideHeader}
+      // category={category}
+      // setCategory={setCategory}
+      // isHideHeader={isHideHeader}
       />
       <Sidebar
-        // isOpen={isOpen}
-        // setIsOpen={setIsOpen}
-        // setCategory={setCategory}
+      // isOpen={isOpen}
+      // setIsOpen={setIsOpen}
+      // setCategory={setCategory}
       />
       {/* <OpenContext.Provider value={data}> */}
-        <Outlet />
+      <Outlet />
       {/* </OpenContext.Provider> */}
     </>
   );

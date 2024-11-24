@@ -26,7 +26,6 @@ function PlayVideo({ videoId, setChannelTitle }) {
         `${BASE_URL}/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${API_KEY}`
       );
       const data = await response.json();
-      console.log(data?.items?.[0].snippet.thumbnails);
       setChannelData(data?.items?.[0]);
     } catch (error) {
       console.log(error);

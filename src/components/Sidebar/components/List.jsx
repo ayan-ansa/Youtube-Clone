@@ -11,7 +11,7 @@ function List({
 }) {
   const setCategoryFun = (e) => {
     setIsOpen(true);
-    let clickText = e.target.innerText;
+    const clickText = e.target.innerText;
     switch (clickText) {
       case "Home":
         setCategory(0);
@@ -28,6 +28,7 @@ function List({
       default:
         setCategory(0);
     }
+    window.scrollTo(0, 0);
   };
   return (
     <NavLink

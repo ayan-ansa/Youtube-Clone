@@ -6,9 +6,13 @@ import Recommend from "./components/Recommend/Recommend";
 import "./Video.css";
 import { OpenContext } from "../../context/OpenContext";
 function Video() {
-  const { isOpen, setIsOpen, category } = useContext(OpenContext);
+  const { isOpen, setIsOpen, category, setIsHideHeader } = useContext(OpenContext);
   const { videoId } = useParams();
   const [channelTitle, setChannelTitle] = useState("");
+  
+  window.addEventListener("popstate", () => {
+    setIsHideHeader(false);
+  }); 
 
   return (
     <main>
