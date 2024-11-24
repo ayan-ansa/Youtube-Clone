@@ -8,9 +8,20 @@ import { FaRegBell } from "react-icons/fa";
 import Search from "./components/Search";
 import ProfileSection from "./components/ProfileSection";
 import "./Header.css";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { OpenContext } from "../../context/OpenContext";
 
-function Header({ setIsOpen, isHideHeader, setApiData, isShow, setIsShow }) {
+function Header() {
+  
+  const {
+    setIsOpen,
+    setApiData,
+    isShow,
+    setIsShow,
+    isHideHeader,
+  } = useContext(OpenContext);
+
   return (
     <header className={isHideHeader ? "header-hide" : ""}>
       <div className={`logo-section ${isShow ? "none" : ""}`}>

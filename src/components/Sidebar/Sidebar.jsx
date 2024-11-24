@@ -4,8 +4,12 @@ import { SiYoutubeshorts } from "react-icons/si";
 import { MdSubscriptions } from "react-icons/md";
 import { listItems, subscriptions, explore } from "../../data";
 import "./Sidebar.css";
+import { useContext } from "react";
+import { OpenContext } from "../../context/OpenContext";
 
-function Sidebar({ isOpen, setCategory, setIsOpen }) {
+function Sidebar() {
+  const {isOpen, setIsOpen,setCategory} = useContext(OpenContext);
+
   return (
     <aside className={isOpen ? "active" : ""}>
       <div className="sidebar">

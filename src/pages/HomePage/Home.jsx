@@ -2,11 +2,11 @@ import { useContext, useEffect, useRef, useState } from "react";
 import Category from "./components/Category/Category";
 import "./Home.css";
 import Feed from "./components/Feed/Feed";
-import { OpenContext } from "../../components/AppLayout";
 import Shimmer from "./components/Shimmer/Shimmer";
+import { OpenContext } from "../../context/OpenContext";
 
-export const API_KEY = "AIzaSyAA-hXM8Yr2QcZlH5KwzB3Q3wi_OA8i6mE";
-export const BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=30&regionCode=IN&videoCategoryId=`;
+export const BASE_URL = import.meta.env.VITE_BASE_URL;
+export const API_KEY = import.meta.env.VITE_API_KEY;
 
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
