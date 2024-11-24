@@ -9,11 +9,10 @@ import {
 import "./PlayVideo.css";
 import { useEffect, useState } from "react";
 import { API_KEY } from "../../../HomePage/Home";
-import { timeAgo } from "../../../HomePage/components/Feed/Card";
-import { convertViews } from "../../../HomePage/components/Feed/Card";
+import { convertViews,timeAgo } from "../../../HomePage/components/Feed/Card";
 import { Link } from "react-router-dom";
 
-const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
+const BASE_URL = import.meta.env.VITE_VIDEO_BASE_URL;
 
 function PlayVideo({ videoId, setChannelTitle }) {
   const [videoData, setVideoData] = useState("");
