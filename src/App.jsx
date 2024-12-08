@@ -2,7 +2,10 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./Layout/AppLayout";
 import Home from "./pages/HomePage/Home";
-import Video from "./pages/VideoPage/Video";
+// import Video from "./pages/VideoPage/Video";
+import { lazy } from "react";
+
+const Video = lazy(() => import("./pages/VideoPage/Video"));
 const router = createBrowserRouter([
   {
     path: "/",
