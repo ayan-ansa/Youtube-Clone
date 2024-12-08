@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import Category from "./components/Category/Category";
 import "./Home.css";
 import Feed from "./components/Feed/Feed";
-// import { OpenContext } from "../../Layout/AppLayout";
 import Shimmer from "./components/Shimmer/Shimmer";
 import { OpenContext } from "../../context/OpenContext";
 

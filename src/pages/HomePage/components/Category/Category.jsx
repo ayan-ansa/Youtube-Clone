@@ -1,9 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Category.css";
-// import { OpenContext } from "../../../../Layout/AppLayout";
-// import { useContext } from "react";
 function Category({ setCategory, setIsShow }) {
-  // const { setIsShow } = useContext(OpenContext);
 
   const categories = [
     "All",
