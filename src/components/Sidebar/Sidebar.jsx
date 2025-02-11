@@ -5,7 +5,7 @@ import { MdSubscriptions } from "react-icons/md";
 import { listItems, subscriptions, explore } from "../../data";
 import "./Sidebar.css";
 import { OpenContext } from "../../context/OpenContext";
-import {useContext} from "react"
+import { useContext } from "react";
 
 function Sidebar() {
   const { isOpen, setCategory, setIsOpen } = useContext(OpenContext);
@@ -57,7 +57,7 @@ function Sidebar() {
               isOpen={isOpen}
             />
           ))}
-          <hr className={`show ${isOpen ? "hide" : ""} margin-bottom`} />
+          <hr className={`show margin-bottom ${isOpen ? "hide" : ""}`} />
           <h3 className={`subscription show ${isOpen ? "hide" : ""}`}>
             Explore
           </h3>

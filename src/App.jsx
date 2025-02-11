@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./Layout/AppLayout";
 import Home from "./pages/HomePage/Home";
 import { lazy } from "react";
+import NotFound from "./components/Notfound/NotFound";
 
 const Video = lazy(() => import("./pages/VideoPage/Video"));
 const router = createBrowserRouter([
@@ -23,14 +24,6 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/music",
-        element: <Home />,
-      },
-      {
-        path: "/news",
-        element: <Home />,
-      },
-      {
         path: "/subscriptions",
         element: <Home />,
       },
@@ -39,23 +32,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/downloads",
-        element: <Home />,
-      },
-      {
-        path: "/your channel",
-        element: <Home />,
-      },
-      {
-        path: "/history",
-        element: <Home />,
-      },
-      {
-        path: "/playlists",
-        element: <Home />,
-      },
-      {
         path: "/all",
+        element: <Home />,
+      },
+      {
+        path: "/music",
+        element: <Home />,
+      },
+      {
+        path: "/news",
         element: <Home />,
       },
       {
@@ -86,6 +71,7 @@ const router = createBrowserRouter([
         path: "/watch/:videoId",
         element: <Video />,
       },
+      { path: "*", element: <NotFound/> },
     ],
   },
 ]);

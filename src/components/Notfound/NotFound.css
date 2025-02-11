@@ -1,0 +1,22 @@
+.container-notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-notfound .title {
+    font-size: 3rem;
+    color: rgb(189, 26, 26);
+    margin-bottom: 1rem;
+}
+
+.container-notfound .button {
+    text-decoration: none;
+    background-color: #fff;
+    color: rgb(189, 26, 26);
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
