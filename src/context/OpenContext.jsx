@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 export const OpenContext = createContext();
 
 export const OpenProvider = ({ children }) => {

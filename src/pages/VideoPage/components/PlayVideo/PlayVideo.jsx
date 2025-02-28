@@ -12,7 +12,7 @@ import { API_KEY } from "../../../HomePage/Home";
 import { convertViews,timeAgo } from "../../../HomePage/components/Feed/Card";
 import { Link } from "react-router-dom";
 
-const BASE_URL = import.meta.env.VITE_VIDEO_BASE_URL;
+export const VIDEO_BASE_URL = import.meta.env.VITE_VIDEO_BASE_URL;
 
 function PlayVideo({ videoId, setChannelTitle }) {
   const [videoData, setVideoData] = useState("");
@@ -22,7 +22,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const fetchChannelData = async (channelId) => {
     try {
       const response = await fetch(
-        `${BASE_URL}/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${API_KEY}`
+        `${VIDEO_BASE_URL}/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${channelId}&key=${API_KEY}`
       );
       const data = await response.json();
       setChannelData(data?.items?.[0]);
@@ -33,7 +33,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const fetchVideoData = async () => {
     try {
       const response = await fetch(
-        `${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
+        `${VIDEO_BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
       );
       const data = await response.json();
       fetchChannelData(data?.items[0]?.snippet?.channelId);
@@ -47,7 +47,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
   const fetchCommentData = async () => {
     try {
       const response = await fetch(
-        `${BASE_URL}/commentThreads?part=snippet%2Creplies&maxResults=50&videoId=${videoId}&key=${API_KEY}`
+        `${VIDEO_BASE_URL}/commentThreads?part=snippet%2Creplies&maxResults=50&videoId=${videoId}&key=${API_KEY}`
       );
       const data = await response.json();
       setCommentData(data?.items);

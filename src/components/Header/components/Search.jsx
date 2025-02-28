@@ -2,6 +2,7 @@ import { useState } from "react";
 import { API_KEY } from "../../../pages/HomePage/Home";
 import { MdOutlineHistory } from "react-icons/md";
 import { searchHistory } from "../../../data";
+import { VIDEO_BASE_URL } from "../../../pages/VideoPage/components/PlayVideo/PlayVideo";
 
 function Search({ search, micro, setApiData, isShow, setIsShow }) {
   const [query, setQuery] = useState("");
@@ -17,7 +18,7 @@ function Search({ search, micro, setApiData, isShow, setIsShow }) {
   const fetchSearchData = async () => {
     try {
       const res = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${query}&key=${API_KEY}`
+        `${VIDEO_BASE_URL}/search?part=snippet&maxResults=50&q=${query}&key=${API_KEY}`
       );
       const data = await res.json();
       if (data) {
