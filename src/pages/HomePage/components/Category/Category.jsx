@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Category.css";
 function Category({ setCategory, setIsShow }) {
-
   const categories = [
     "All",
     "Music",
@@ -22,17 +21,14 @@ function Category({ setCategory, setIsShow }) {
       case "Music":
         setCategory(10);
         break;
-      case "News":
-        setCategory(25);
-        break;
       case "Sports":
         setCategory(17);
         break;
       case "Gaming":
         setCategory(20);
         break;
-      case "Technology":
-        setCategory(28);
+      case "Blogs":
+        setCategory(22);
         break;
       case "Comedy":
         setCategory(23);
@@ -40,8 +36,11 @@ function Category({ setCategory, setIsShow }) {
       case "Entertainment":
         setCategory(24);
         break;
-      case "Blogs":
-        setCategory(22);
+      case "News":
+        setCategory(25);
+        break;
+      case "Technology":
+        setCategory(28);
         break;
     }
   };

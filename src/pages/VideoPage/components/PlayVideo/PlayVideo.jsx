@@ -55,7 +55,7 @@ function PlayVideo({ videoId, setChannelTitle }) {
       console.log(error);
     }
   };
-
+  
   useEffect(() => {
     if (videoId) {
       fetchVideoData();
